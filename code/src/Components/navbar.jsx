@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../../src/App.css";
 import logoimg from "../assets/images/Headr/logo-img.svg";
 
@@ -8,7 +9,7 @@ function Navbar() {
         <img src={logoimg} alt="" />
         <h1>Farmscape</h1>
       </div>
-      <Hamburger/>
+      <Hamburger />
       <hr className="line" />
       <div className="navbar">
         <div className="nav-items" id="item-1">
@@ -37,31 +38,43 @@ function Navbar() {
 }
 
 function Hamburger() {
+  const [dropdown, setDropdown] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  function toggledropdown() {
+    setDropdown(!dropdown);
+    console.log(dropdown);
+  }
+  const toggleActive = () => {
+    setIsActive(isActive);
+    console.log(isActive);
+  }
   return (
     <div>
-      <div className="hamburger-icon" onClick={Dropdown}>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+      <div className="hamburger-icon" onClick={toggledropdown}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
       </div>
-    
-    </div>
-  )
-}
-
-function Dropdown() {
-  return(  <div className="dropdown-menu">
-        <div className="logo">
-        <img src={logoimg} alt="" />
-        <h1>Farmscape</h1>
+      {dropdown && (
+        <div className="dropdown-menu">
+          <ul className="dropdown-list">
+            <li href="#" className="dp-list-items" onClick={toggleActive} >
+              Home
+            </li>
+            <li href="#" className="dp-list-items">
+              About us
+            </li>
+            <li href="#" className="dp-list-items">
+              Services
+            </li>
+            <li href="#" className=" dp-list-items ">
+              Contact us
+            </li>
+          </ul>
         </div>
-        <ul className="dropdown-list">
-          <li href="#">Home</li>
-          <li href="#">About us</li>
-          <li href="#">Services</li>
-          <li href="#" className="dp-list-item">Contact us</li>
-        </ul>
-    </div>)
+      )}
+    </div>
+  );
 }
 
 export default Navbar;
