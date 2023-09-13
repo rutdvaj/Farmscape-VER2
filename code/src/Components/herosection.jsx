@@ -25,25 +25,25 @@ const Herosection = () => {
       </div>
         <div className="image">
           <img src={img1} alt="" className='desktop-img'/>
-          <img src={smimg1} alt='' className='mobile-img'/>
+          <img src={smimg1} alt='' className='mb-img-1 mobile-img'/>
       </div> 
       <div className="image-2">
           <img src={img2} alt="" className='desktop-img'/>
-          <img src={smimg2} alt="" className='mobile-img mb-img-2'/>
+          <img src={smimg2} alt="" className=' mb-img-2 mobile-img'/>
           
       </div>
       <div className="image-3">
           <img src={img3} alt="" className='desktop-img' />
-          <img src={smimg3} alt="" className='mobile-img mb-img-3'/>
+          <img src={smimg3} alt="" className=' mb-img-3 mobile-img'/>
           
       </div>
       <div className="image-4">
         <img src={img4} alt="" className='desktop-img' />
-        <img src={smimg4} alt="" className='mobile-img mb-img-4'/>
+        <img src={smimg4} alt="" className=' mb-img-4 mobile-img'/>
       </div>
       <div className="image-5">
         <img src={img5} alt="" className='desktop-img' />
-        <img src={smimg5} alt="" className='mobile-img mb-img-5'/>
+        <img src={smimg5} alt="" className=' mb-img-5 mobile-img'/>
       </div> 
         <div className="sign-up">
           <button class="button">Sign up</button>
