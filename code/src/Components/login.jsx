@@ -3,8 +3,22 @@ import loginimg from "../../src/assets/images/Headr/login.png";
 import google from "../../src/assets/images/Headr/google.png";
 import facebook from "../../src/assets/images/Headr/Facebook.png";
 import apple from "../../src/assets/images/Headr/apple.png";
+import { useState } from "react";
+import { auth } from "./firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
+  const [Email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+
+  const userLogin = async () => {
+    try {
+      const user = await signInWithEmailAndPassword(auth, Email, pass);
+      console.log(user);
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
   return (
     <div>
       <div className="logo logo-center">
@@ -30,18 +44,24 @@ const Login = () => {
           <div className="input-container">
             <input
               type="text"
-              placeholder="Enter Email or Username"
+              placeholder="Enter Email"
               className="input"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
             <input
               type="text"
               placeholder="Enter Your Password."
               className="input"
+              onChange={(e) => {
+                setPass(e.target.value);
+              }}
             />
           </div>
-          <div>
-            <button className="login-button">Login</button>
-          </div>
+          <button className="login-button" type="submit" onClick={userLogin}>
+            Login
+          </button>
           <div className="login-footer">
             <p>Or You Can Continue With.</p>
           </div>

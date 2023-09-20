@@ -7,7 +7,7 @@ import ServicesMain from "./Components/services-main";
 import Footer from "./Components/footer";
 import Login from "./Components/login";
 import Register from "./Components/register";
-
+import { firebaseConfig } from "./Components/firebase";
 function App() {
   return (
     <div>
