@@ -6,6 +6,7 @@ import apple from "../../src/assets/images/Headr/apple.png";
 import { useState } from "react";
 import { auth } from "./firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [Email, setEmail] = useState("");

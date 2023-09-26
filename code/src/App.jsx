@@ -8,16 +8,17 @@ import Footer from "./Components/footer";
 import Login from "./Components/login";
 import Register from "./Components/register";
 import { firebaseConfig } from "./Components/firebase";
+import Home from "./Components/pages/home";
 function App() {
   return (
     <div>
-      <Navbar />
-      <Herosection />
-      <AboutUsMain />
-      <ServicesMain />
-      <Footer />
-      <Login />
-      <Register />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="Register" element={<Register />} />
+          <Route path="Register/Login" element={<Login />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

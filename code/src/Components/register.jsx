@@ -6,10 +6,12 @@ import apple from "../../src/assets/images/Headr/apple.png";
 import { useState } from "react";
 import { auth } from "./firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [regEmail, setRegEmail] = useState("");
   const [regPass, setRegPass] = useState("");
+  const navigate = useNavigate();
 
   const userReg = async () => {
     try {
@@ -39,8 +41,12 @@ const Register = () => {
           <div className="register-p-1">
             <p>Go through our Terms and Conditions</p>
             <p>
-              <a href="" className="register-link">
-                Terms and Conditions
+              <a
+                href=""
+                className="register-link"
+                onClick={() => navigate("Login")}
+              >
+                Login
               </a>
             </p>
           </div>
