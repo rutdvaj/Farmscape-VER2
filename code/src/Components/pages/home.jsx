@@ -3,6 +3,7 @@ import Herosection from "../herosection";
 import AboutUsMain from "../aboutus-main";
 import ServicesMain from "../services-main";
 import Footer from "../footer";
+import Product from "../products";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <AboutUsMain />
       <ServicesMain />
       <Footer />
+      <Product />
     </>
   );
 };
