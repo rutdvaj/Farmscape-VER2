@@ -1203,6 +1203,165 @@ left: 0;
   left: 0;
 }
 
+.navbar{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(33, 130, 37, 0.4);
+}
+
+.UA-header{
+  font-family: var(--primary-font);
+  font-size: 48px;
+  color: #228B22;
+}
+
+.profile-img{
+  display: flex;
+  justify-content: space-around;
+  padding: 1.4rem;
+  margin-right: 1rem;
+}
+
+.profile-img h3{
+  font-size: 20px;
+  font-family: var(--primary-font);
+  color: #228B22;
+  margin-right: 0.75rem;
+}
+
+.back-icon{
+  margin: 0;
+  pad: 0;
+}
+
+.back-icon{
+  margin-top: 2.75rem;
+  margin-left: 1rem;
+}
+
+.AD{
+  display: flex;
+  justify-content: space-between;
+}
+
+.AD-list{
+  width: 400px;
+  height: 905px;
+  background-color: rgba(33, 130, 37, 0.1);
+}
+
+.DB-list{
+  list-style-type: none;
+  padding: 14rem;
+}
+
+.DB-list p{
+  font-family: var(--Secondary-font);
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.li{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.li-img{
+  margin-right: 1rem;
+  margin-top: 1.25rem;
+}
+
+.active-button{
+  width: 275px;
+  height: 66px;
+  border-radius: 32px;
+  background-color: #218225;
+  color: white;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: var(--Secondary-font);
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.9s;
+}
+
+.AD-content{
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+}
+
+.AD-content-h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--Secondary-font);
+  color: #218225;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.AD-content-1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.AD-content-1 h2{
+  font-size: 26px;
+  font-weight: normal;
+  color: var(--Active-color);
+  font-family: var(--Secondary-font);
+}
+
+.AD-content-1 p{
+  font-size: 24px;
+  font-family: var(--Secondary-font);
+  color: black;
+}
+
+.AD-content-1-1{
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.AD-content-1-2{
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.AD-content-2{
+  display: flex;
+  justify-content: space-between;
+}
+
+.AD-content-2 h2{
+font-size: 26px;
+  font-weight: normal;
+  color: var(--Active-color);
+  font-family: var(--Secondary-font);
+}
+
+
+.AD-content-2 p{
+  font-size: 24px;
+    font-family: var(--Secondary-font);
+    color: black;
+}
+
+.AD-content-2-1{
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.AD-content-2-2{
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
 @media screen and  (max-width:390px) {
   .navbar{
     display: none;
@@ -1447,6 +1606,160 @@ left: 0;
 }
 .login-input h2{
   display: none;
+}
+
+.product-display{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-display-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-display-3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-display-4{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-1{
+  width: 310px;
+  height: 403px;
+  border-radius: 30px;
+}
+
+.p-1 h3{
+  font-size: 30px;
+}
+
+.p-1 p{
+  font-size: 20px;
+}
+
+.p-2{
+  width: 310px;
+  height: 525px;
+  border-radius: 30px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.p-2 h3{
+  font-size: 30px;
+}
+
+.p-2 p{
+  font-size: 20px;
+}
+
+.p-3{
+  width: 310px;
+  height: 480px;
+  border-radius: 30px;
+  margin-right: 1.5rem;
+}
+
+.p-3 h3{
+  font-size: 30px;
+}
+
+.p-3 p{
+  font-size: 20px;
+}
+
+.p-4{
+  width: 340px;
+  height: 440px;
+  border-radius: 30px;
+  margin-left: 1rem;
+}
+
+.p-4 h3{
+  font-size: 30px;
+}
+
+.p-4 p{
+  font-size: 20px;
+}
+
+.p-5{
+  width: 310px;
+  height: 410px;
+  border-radius: 30px;
+  margin-right: 1.5rem;
+}
+
+.p-5 h3{
+  font-size: 30px;
+}
+
+.p-5 p{
+  font-size: 20px;
+}
+
+.p-6{
+  width: 310px;
+  height: 480px;
+  border-radius: 30px;
+  margin-left: 1.5rem;
+}
+
+.p-6 h3{
+  font-size: 30px;
+}
+
+.p-6 p{
+  font-size: 20px;
+}
+
+.p-7{
+  width: 310px;
+  height: 440px;
+  border-radius: 30px;
+  margin-right: 1.5rem;
+}
+
+.p-7 h3{
+  font-size: 30px;
+}
+
+.p-7 p{
+  font-size: 20px;
+}
+
+.p-8{
+  width: 310px;
+  height: 600px;
+  border-radius: 30px;
+  margin-left: 1.5rem;
+
+}
+
+.p-8 h3{
+  font-size: 30px;
+}
+
+.p-8 p{
+  font-size: 20px;
+}
+
+.order{
+  width: 100px;
+  height: 35px;
+}
+.enquire{
+  width: 120px;
+  height: 35px;
 }
 }
 
