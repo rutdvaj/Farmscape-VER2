@@ -5,7 +5,6 @@ import ServicesMain from "../services-main";
 import Footer from "../footer";
 import Product from "../products";
 import Useradm from "../useradm";
-
 const Home = () => {
   return (
     <>

@@ -47,7 +47,7 @@ function Hamburger() {
   const toggleActive = () => {
     setIsActive(isActive);
     console.log(isActive);
-  }
+  };
   return (
     <div>
       <div className="hamburger-icon" onClick={toggledropdown}>
@@ -58,7 +58,7 @@ function Hamburger() {
       {dropdown && (
         <div className="dropdown-menu">
           <ul className="dropdown-list">
-            <li href="#" className="dp-list-items" onClick={toggleActive} >
+            <li href="#" className="dp-list-items">
               Home
             </li>
             <li href="#" className="dp-list-items">

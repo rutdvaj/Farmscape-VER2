@@ -10,6 +10,14 @@ import blADimg from "../../src/assets/images/Headr/🦆 icon black _user_.png";
 import selOHimg from "../../src/assets/images/Headr/🦆 icon white__Sort Amount Down_.png";
 import selOTimg from "../../src/assets/images/Headr/🦆 icon white__Alternate Map Marker_ (1).png";
 import selCSimg from "../../src/assets/images/Headr/🦆 icon white__interface help customer support 1_ (1).png";
+import backiconsm from "../../src/assets/images/hs-images/mobile-images/🦆 icon _arrow-left-sm_.png";
+import menu from "../../src/assets/images/hs-images/mobile-images/🦆 icon _menu_.png";
+import AccountDetails from "./Accountdetails";
+import PaymentUpdates from "./PaymentUpdates";
+import OrderHistory from "./OrderHistory";
+import OrderTracking from "./OrderTracking";
+import CustomerService from "./CustomerService";
+import UaHamburger from "./UAhamburger";
 import { useState } from "react";
 
 const Useradm = () => {
@@ -21,14 +29,19 @@ const Useradm = () => {
 
   return (
     <>
-      <div className="navbar">
+      <div className="navbar-UA">
         <div className="back-icon">
-          <img src={backicon} alt="" />
+          <img src={backicon} alt="" className="desktop-img" />
+          <img src={backiconsm} alt="" className="mobile-img" />
         </div>
         <h1 className="UA-header">Dashboard</h1>
         <div className="profile-img">
           <h3 UA-compname>XYZcorp</h3>
-          <img src={profileimg} alt="" />
+          <img src={profileimg} alt="" className="desktop-img" />
+          <div className="">
+            {/* <img src={menu} alt="" /> */}
+            <UaHamburger />
+          </div>
         </div>
       </div>
 
@@ -112,30 +125,37 @@ const Useradm = () => {
             </li>
           </ul>
         </div>
+
         <div className="AD-content">
-          <div className="AD-content-h1">
-            <h1>Account Details</h1>
-          </div>
-          <div className="AD-content-1">
-            <div className="AD-content-1-1">
-              <h2>Business Email</h2>
-              <p>info@XYZcorp.com</p>
+          {isActive === 1 && (
+            <div>
+              <AccountDetails />
             </div>
-            <div className="AD-content-1-2">
-              <h2>Linkedin ID</h2>
-              <p>MelindaJennings_87</p>
+          )}
+
+          {isActive === 2 && (
+            <div>
+              <PaymentUpdates />
             </div>
-          </div>
-          <div className="AD-content-2">
-            <div className="AD-content-2-1">
-              <h2>Postal Address</h2>
-              <p>123 Elm Street,Anytown, USA12345</p>
+          )}
+
+          {isActive === 3 && (
+            <div>
+              <OrderHistory />
             </div>
-            <div className="AD-content-2-2">
-              <h2>Contact number</h2>
-              <p>+1 (555) 555-5555</p>
+          )}
+
+          {isActive === 4 && (
+            <div>
+              <OrderTracking />
             </div>
-          </div>
+          )}
+
+          {isActive === 5 && (
+            <div>
+              <CustomerService />
+            </div>
+          )}
         </div>
       </div>
     </>
