@@ -1651,7 +1651,150 @@ margin-top: 4rem;
   font-size: 20px;
 }
 
+.CU-main-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
 
+.C-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.C-info-1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.C-info-2{
+  display: flex;
+  justify-content: space-between;
+}
+
+.C-info-1-1 p{
+  font-family: var(--Secondary-font);
+  font-size: 22px;
+}
+
+.C-info-1{
+  margin-left: 3rem;
+}
+
+.C-input-1{
+  width: 567px;
+  height: 60px;
+  border-radius: 32px;
+  outline: none;
+  border: none;
+  background-color: #E9E9E9;
+}
+
+.C-input-1::placeholder{
+  font-family: var(--Secondary-font);
+  font-size: 14px;
+  color: #565656;
+}
+
+.C-info-1-2 p{
+  font-family: var(--Secondary-font);
+  font-size: 22px;
+}
+
+.C-info-1-2{
+  margin-right: 3rem;
+}
+
+.C-input-2{
+  width: 567px;
+    height: 60px;
+    border-radius: 32px;
+    outline: none;
+    border: none;
+    background-color: #E9E9E9;
+}
+
+.C-input-2::placeholder{
+  font-family: var(--Secondary-font);
+    font-size: 14px;
+  color: #565656;
+}
+
+
+.C-info-2-1 p{
+ font-family: var(--Secondary-font);
+ font-size: 22px;
+}
+
+.C-info-2-1{
+  margin-left: 3rem;
+}
+
+.C-input-3{
+  width: 567px;
+  height: 60px;
+  border-radius: 32px;
+    outline: none;
+    border: none;
+    background-color: #E9E9E9;
+}
+
+.C-input-3::placeholder {
+  font-family: var(--Secondary-font);
+  font-size: 14px;
+  color: #565656;
+}
+
+.C-info-2-2 p{
+  font-family: var(--Secondary-font);
+  font-size: 22px;
+}
+
+.C-input-4{
+  width: 567px;
+  height: 200px;
+  border-radius: 32px;
+    outline: none;
+    border: none;
+    background-color: #E9E9E9;
+}
+
+.C-input-4::placeholder{
+  font-family: var(--Secondary-font);
+  font-size: 14px;
+  color: #565656;
+}
+
+.C-info-2-2{
+  margin-right: 3rem;
+}
+
+.send-button{
+  display: flex;
+  justify-content: center;
+    align-items: center;
+}
+
+.C-button{
+  width: 369px;
+    height: 60px;
+    background-color: #218225;
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+    border-radius: 12px;
+    
+
+}
+
+.C-button p{
+  font-size: 18px;
+  font-family: var(--Secondary-font);
+}
 
 @media screen and  (max-width:390px) {
   .navbar{

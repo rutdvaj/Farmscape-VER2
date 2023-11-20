@@ -36,7 +36,7 @@ const UaHamburger = () => {
       <div className="mobile-img HM-img" onClick={toggledropdown}>
         <img src={menu} alt="" />
       </div>
-      {dropdown && (
+      {dropdown && screenWidth <= 390 && (
         <div>
           <ul className="HB-menu-list">
             <li
@@ -72,6 +72,7 @@ const UaHamburger = () => {
           </ul>
         </div>
       )}
+
       <div className="AD-content">
         {Active === 1 && screenWidth <= 390 && (
           <div>
