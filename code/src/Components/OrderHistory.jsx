@@ -1,7 +1,7 @@
 const OrderHistory = () => {
   return (
     <>
-      <div className="OH OH-mobile">
+      <div className="OH">
         <div className="OH">
           <h2>Order History</h2>
         </div>

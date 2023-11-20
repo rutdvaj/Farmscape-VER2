@@ -11,7 +11,6 @@ import selOHimg from "../../src/assets/images/Headr/🦆 icon white__Sort Amount
 import selOTimg from "../../src/assets/images/Headr/🦆 icon white__Alternate Map Marker_ (1).png";
 import selCSimg from "../../src/assets/images/Headr/🦆 icon white__interface help customer support 1_ (1).png";
 import backiconsm from "../../src/assets/images/hs-images/mobile-images/🦆 icon _arrow-left-sm_.png";
-import menu from "../../src/assets/images/hs-images/mobile-images/🦆 icon _menu_.png";
 import AccountDetails from "./Accountdetails";
 import PaymentUpdates from "./PaymentUpdates";
 import OrderHistory from "./OrderHistory";
@@ -19,13 +18,28 @@ import OrderTracking from "./OrderTracking";
 import CustomerService from "./CustomerService";
 import UaHamburger from "./UAhamburger";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const Useradm = () => {
   const [isActive, setActive] = useState(null);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const handleClick = (index) => {
     setActive(index);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+      console.log(`${screenWidth}px`);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -127,31 +141,31 @@ const Useradm = () => {
         </div>
 
         <div className="AD-content">
-          {isActive === 1 && (
+          {isActive === 1 && screenWidth >= 390 && (
             <div>
               <AccountDetails />
             </div>
           )}
 
-          {isActive === 2 && (
+          {isActive === 2 && screenWidth >= 390 && (
             <div>
               <PaymentUpdates />
             </div>
           )}
 
-          {isActive === 3 && (
+          {isActive === 3 && screenWidth >= 390 && (
             <div>
               <OrderHistory />
             </div>
           )}
 
-          {isActive === 4 && (
+          {isActive === 4 && screenWidth >= 390 && (
             <div>
               <OrderTracking />
             </div>
           )}
 
-          {isActive === 5 && (
+          {isActive === 5 && screenWidth >= 390 && (
             <div>
               <CustomerService />
             </div>

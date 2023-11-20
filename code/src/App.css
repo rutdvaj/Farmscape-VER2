@@ -1651,6 +1651,8 @@ margin-top: 4rem;
   font-size: 20px;
 }
 
+
+
 @media screen and  (max-width:390px) {
   .navbar{
     display: none;
@@ -2369,35 +2371,42 @@ margin-top: 4rem;
     text-align: center;
 }
 
-.AD-content-mobile{
+
+
+.AD-content{
   position: relative;
-  right: 200px;
-  top: 50px;
+    right: 200px;
+    top: 50px;
+    padding: 0rem;
 }
 
-.PU-mobile{
+.PU{
   position: relative;
-  right: 100px;
-  top: 50px;
+    right: 100px;
+    top: 50px;
 }
 
-.OH-mobile{
+.OH{
   position: relative;
-  right: 93.5px;
-  top: 50px;
+    right: 91.5px;
+    top: 50px;
 }
 
-.OT-mobile{
+.OT{
   position: relative;
-  right: 70px;
-  top: 50px;
+    right: 70px;
+    top: 50px;
 }
 
-.CS-mobile{
+
+
+.CS{
   position: relative;
-  right: 95px;
-  top: 50px;
+    right: 95px;
+    top: 50px;
 }
+
+
 
 }
 
@@ -2412,4 +2421,7 @@ margin-top: 4rem;
   .mobile-img{
     display: none;
   }
+
+  
+
 }

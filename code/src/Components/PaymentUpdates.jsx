@@ -8,7 +8,7 @@ import CC3img from "../../src/assets/images/Headr/CC3.png";
 const PaymentUpdates = () => {
   return (
     <>
-      <div className="PU PU-mobile">
+      <div className="PU ">
         <div className="PU-img">
           <div className="PU-img-1">
             <img src={CC1infoimg} alt="" />

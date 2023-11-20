@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import menu from "../../src/assets/images/hs-images/mobile-images/🦆 icon _menu_.png";
 import AccountDetails from "./Accountdetails";
 import CustomerService from "./CustomerService";
@@ -9,6 +9,7 @@ import PaymentUpdates from "./PaymentUpdates";
 const UaHamburger = () => {
   const [dropdown, setDropdown] = useState(false);
   const [Active, setActive] = useState(null);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   function toggledropdown() {
     setDropdown(!dropdown);
   }
@@ -16,6 +17,20 @@ const UaHamburger = () => {
   function handleClick(index) {
     setActive(index);
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+      console.log(`${screenWidth}px`);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div className="mobile-img HM-img" onClick={toggledropdown}>
@@ -57,32 +72,32 @@ const UaHamburger = () => {
           </ul>
         </div>
       )}
-      <div className="AD-content-mobile">
-        {Active === 1 && (
+      <div className="AD-content">
+        {Active === 1 && screenWidth <= 390 && (
           <div>
             <AccountDetails />
           </div>
         )}
 
-        {Active === 2 && (
+        {Active === 2 && screenWidth <= 390 && (
           <div>
             <PaymentUpdates />
           </div>
         )}
 
-        {Active === 3 && (
+        {Active === 3 && screenWidth <= 390 && (
           <div>
             <OrderHistory />
           </div>
         )}
 
-        {Active === 4 && (
+        {Active === 4 && screenWidth <= 390 && (
           <div>
             <OrderTracking />
           </div>
         )}
 
-        {Active === 5 && (
+        {Active === 5 && screenWidth <= 390 && (
           <div>
             <CustomerService />
           </div>

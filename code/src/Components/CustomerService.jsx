@@ -4,7 +4,7 @@ import CS2img from "../../src/assets/images/Headr/🦆 icon _send_.png";
 const CustomerService = () => {
   return (
     <>
-      <div className="CS CS-mobile">
+      <div className="CS">
         <div className="CS-faq">
           <ul className="CS-faq-1">
             <li>
