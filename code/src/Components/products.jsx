@@ -16,10 +16,14 @@ import p5imgm from "../../src/assets/images/hs-images/mobile-images/p5-m-img.png
 import p6imgm from "../../src/assets/images/hs-images/mobile-images/p6-m-img.png";
 import p7imgm from "../../src/assets/images/hs-images/mobile-images/p8-m-img.png";
 import p8imgm from "../../src/assets/images/hs-images/mobile-images/p8-m-img.png";
+import Navbar from "./navbar";
+import Footer from "./footer";
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
   return (
     <>
+      <Navbar />
       <div>
         <div className="product-img">
           <img src={mainpimage} alt="" className="desktop-img" />
@@ -158,6 +162,7 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

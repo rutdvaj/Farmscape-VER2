@@ -9,6 +9,9 @@ import Login from "./Components/login";
 import Register from "./Components/register";
 import { firebaseConfig } from "./Components/firebase";
 import Home from "./Components/pages/home";
+import Product from "./Components/products";
+import Useradm from "./Components/useradm";
+import ContactUs from "./Components/Contactus";
 function App() {
   return (
     <div>
@@ -17,6 +20,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="Register" element={<Register />} />
           <Route path="Register/Login" element={<Login />} />
+          <Route path="Product" element={<Product />} />
+          <Route path="Dashboard" element={<Useradm />} />
+          <Route path="Contactus" element={<ContactUs />} />
         </Routes>
       </Router>
     </div>

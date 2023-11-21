@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../src/App.css";
 import logoimg from "../assets/images/Headr/logo-img.svg";
+import Product from "./products";
 
 function Navbar() {
   return (
@@ -13,22 +15,22 @@ function Navbar() {
       <hr className="line" />
       <div className="navbar">
         <div className="nav-items" id="item-1">
-          <a href="/index.html" className="page-link">
+          <a className="page-link" onClick={() => navigate("Home")}>
             Home
           </a>
         </div>
         <div className="nav-items" id="item - 2">
-          <a href="aboutus.html" className="page-link">
-            About us
+          <a className=" page-link" onClick={() => navigate("Product")}>
+            Products
           </a>
         </div>
         <div className="nav-items" id="item-3">
-          <a href="/services.html" className="page-link">
-            Services
+          <a className="page-link" onClick={() => navigate("Dashboard")}>
+            Dashboard
           </a>
         </div>
         <div className="nav-items" id="item-4">
-          <a href="/contactus.html " className="page-link">
+          <a className="page-link" onClick={() => navigate("Contactus")}>
             Contact us
           </a>
         </div>
@@ -40,14 +42,17 @@ function Navbar() {
 function Hamburger() {
   const [dropdown, setDropdown] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [Index, SetIndex] = useState(null);
+  const navigate = useNavigate();
   function toggledropdown() {
     setDropdown(!dropdown);
-    console.log(dropdown);
   }
   const toggleActive = () => {
     setIsActive(isActive);
-    console.log(isActive);
   };
+  function handleClick(index) {
+    SetIndex(index);
+  }
   return (
     <div>
       <div className="hamburger-icon" onClick={toggledropdown}>
@@ -58,17 +63,24 @@ function Hamburger() {
       {dropdown && (
         <div className="dropdown-menu">
           <ul className="dropdown-list">
-            <li href="#" className="dp-list-items">
-              Home
+            <li className="dp-list-items">Home</li>
+            <li className="dp-list-items">
+              <a onClick={() => handleClick(2)}>
+                {Index === 2 && navigate("Product")}
+                Products
+              </a>
             </li>
-            <li href="#" className="dp-list-items">
-              About us
+            <li className="dp-list-items" onClick={() => navigate("Dashboard")}>
+              <a onClick={() => handleClick(3)}>
+                {Index === 3 && navigate("Dashboard")}
+                Dashboard
+              </a>
             </li>
-            <li href="#" className="dp-list-items">
-              Services
-            </li>
-            <li href="#" className=" dp-list-items ">
-              Contact us
+            <li className=" dp-list-items ">
+              <a onClick={() => handleClick(4)}>
+                {Index === 4 && navigate("Contactus")}
+                Contact us
+              </a>
             </li>
           </ul>
         </div>

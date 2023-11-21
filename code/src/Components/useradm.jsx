@@ -19,10 +19,12 @@ import CustomerService from "./CustomerService";
 import UaHamburger from "./UAhamburger";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Useradm = () => {
   const [isActive, setActive] = useState(null);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const navigate = useNavigate();
 
   const handleClick = (index) => {
     setActive(index);

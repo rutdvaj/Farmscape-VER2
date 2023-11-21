@@ -14,9 +14,6 @@ const Home = () => {
       <AboutUsMain />
       <ServicesMain />
       <Footer />
-      <ContactUs />
-      {/* <Useradm /> */}
-      {/* <Product /> */}
     </>
   );
 };
