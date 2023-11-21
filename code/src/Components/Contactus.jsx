@@ -1,13 +1,17 @@
 import Navbar from "./navbar";
 import Footer from "./footer";
 import cuimg from "../../src/assets/images/Headr/CU-img1.png";
+import cuimgmob from "../../src/assets/images/hs-images/mobile-images/headingCU-img1-mob.png";
 
 const ContactUs = () => {
   return (
     <>
       <Navbar />
-      <div className="CU-main-img">
+      <div className="CU-main-img ">
         <img src={cuimg} alt="" />
+      </div>
+      <div className="mobile-img CU-mob-img">
+        <img src={cuimgmob} alt="" />
       </div>
       <div className="C-info">
         <div className="C-info-1">
@@ -39,7 +43,11 @@ const ContactUs = () => {
           </div>
           <div className="C-info-2-2">
             <p>Enquiry Details</p>
-            <input type="text" placeholder="Details" className="C-input-4" />
+            <input
+              type="text"
+              placeholder="Details Of Your Enquiry"
+              className="C-input-4"
+            />
           </div>
         </div>
       </div>

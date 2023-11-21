@@ -2549,7 +2549,47 @@ margin-top: 4rem;
     top: 50px;
 }
 
+.CU-main-img{
+  display: none;
+}
 
+.CU-mob-img{
+  margin-top: 2rem;
+}
+
+.C-input-1,.C-input-2,.C-input-3{
+  width: 350px;
+  height: 60px;
+}
+
+.C-info-1-1 p, .C-info-1-2 p, .C-info-2-1 p , .C-info-2-2 p{
+  display: none;
+}
+
+.C-input-4{
+  width: 350px;
+  height: 100px;
+}
+
+.C-info-1 , .C-info-2{
+  display: flex;
+  flex-direction: column;
+}
+
+.C-input-1{
+  margin-top: 1rem;
+}
+
+.C-input-1,.C-input-2,.C-input-3{
+  position: relative;
+  right: 35px;
+  margin-bottom: 2rem;
+}
+
+.C-input-4{
+  position: relative;
+  left: 10px;
+}
 
 }
 
