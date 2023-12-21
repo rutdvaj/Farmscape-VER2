@@ -3,17 +3,17 @@ import Herosection from "../herosection";
 import AboutUsMain from "../aboutus-main";
 import ServicesMain from "../services-main";
 import Footer from "../footer";
-import ContactUs from "../Contactus";
-import Product from "../products";
-import Useradm from "../useradm";
+import { UserProvider } from "../user";
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <Herosection />
-      <AboutUsMain />
-      <ServicesMain />
-      <Footer />
+      <UserProvider>
+        <Navbar />
+        <Herosection />
+        <AboutUsMain />
+        <ServicesMain />
+        <Footer />
+      </UserProvider>
     </>
   );
 };

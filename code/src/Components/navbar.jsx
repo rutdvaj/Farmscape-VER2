@@ -5,6 +5,7 @@ import logoimg from "../assets/images/Headr/logo-img.svg";
 import Product from "./products";
 
 function Navbar() {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="logo">

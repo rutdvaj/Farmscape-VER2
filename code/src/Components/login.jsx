@@ -4,22 +4,15 @@ import google from "../../src/assets/images/Headr/google.png";
 import facebook from "../../src/assets/images/Headr/Facebook.png";
 import apple from "../../src/assets/images/Headr/apple.png";
 import { useState } from "react";
-import { auth } from "./firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { useUser } from "./user";
+import { ID } from "appwrite";
 
-const Login = () => {
-  const [Email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+const Loginuser = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const user = useUser();
 
-  const userLogin = async () => {
-    try {
-      const user = await signInWithEmailAndPassword(auth, Email, pass);
-      console.log(user);
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
   return (
     <div>
       <div className="logo logo-center">
@@ -56,11 +49,15 @@ const Login = () => {
               placeholder="Enter Your Password."
               className="input"
               onChange={(e) => {
-                setPass(e.target.value);
+                setPassword(e.target.value);
               }}
             />
           </div>
-          <button className="login-button" type="submit" onClick={userLogin}>
+          <button
+            className="login-button"
+            type="submit"
+            onClick={() => user.login(email, password)}
+          >
             Login
           </button>
           <div className="login-footer">
@@ -77,4 +74,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Loginuser;
