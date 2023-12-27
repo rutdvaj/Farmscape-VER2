@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  BrowserRouter,
+} from "react-router-dom";
 import Navbar from "./Components/navbar";
 import Herosection from "./Components/herosection";
 import AboutUsMain from "./Components/aboutus-main";
@@ -17,16 +22,18 @@ function App() {
   return (
     <div>
       <UserProvider>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="Register" element={<Registeruser />} />
-            <Route path="Register/Login" element={<Loginuser />} />
-            <Route path="Product" element={<Product />} />
-            <Route path="Dashboard" element={<Useradm />} />
-            <Route path="Contactus" element={<ContactUs />} />
-          </Routes>
-        </Router>
+        <BrowserRouter>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="Register" element={<Registeruser />} />
+              <Route path="Register/Login" element={<Loginuser />} />
+              <Route path="Product" element={<Product />} />
+              <Route path="Dashboard" element={<Useradm />} />
+              <Route path="Contactus" element={<ContactUs />} />
+            </Routes>
+          </Router>
+        </BrowserRouter>
       </UserProvider>
     </div>
   );
